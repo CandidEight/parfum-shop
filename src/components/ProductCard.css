@@ -1,0 +1,126 @@
+.product-card {
+	background: #fff;
+	padding: 20px 16px 16px;
+	text-align: center;
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	border: 1px solid var(--color-border);
+	position: relative;
+	cursor: pointer;
+	box-shadow: 0 4px 12px var(--color-shadow-light);
+	animation: fadeInUp 0.6s ease forwards;
+	opacity: 0;
+}
+
+.product-card:nth-child(1) { animation-delay: 0.05s; }
+.product-card:nth-child(2) { animation-delay: 0.10s; }
+.product-card:nth-child(3) { animation-delay: 0.15s; }
+.product-card:nth-child(4) { animation-delay: 0.20s; }
+.product-card:nth-child(5) { animation-delay: 0.25s; }
+.product-card:nth-child(6) { animation-delay: 0.30s; }
+.product-card:nth-child(7) { animation-delay: 0.35s; }
+.product-card:nth-child(8) { animation-delay: 0.40s; }
+.product-card:nth-child(9) { animation-delay: 0.45s; }
+.product-card:nth-child(10) { animation-delay: 0.50s; }
+.product-card:nth-child(11) { animation-delay: 0.55s; }
+.product-card:nth-child(12) { animation-delay: 0.60s; }
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.product-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 20px 48px var(--color-shadow-medium);
+	border-color: var(--color-primary);
+}
+
+.product-card::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background: var(--color-primary);
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.product-card:hover::after {
+	opacity: 1;
+}
+
+.product-link {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	cursor: pointer;
+}
+
+.product-image {
+	width: 100%;
+	max-width: 140px;
+	height: 180px;
+	object-fit: contain;
+	margin: 0 auto 12px;
+	display: block;
+	transition: transform 0.3s;
+}
+
+.product-card:hover .product-image {
+	transform: scale(1.04);
+}
+
+.product-name {
+	font-family: 'Playfair Display', serif;
+	font-size: 17px;
+	font-weight: 600;
+	margin-bottom: 2px;
+	color: var(--color-text);
+	letter-spacing: 0.3px;
+}
+
+.product-brand {
+	font-size: 12px;
+	color: var(--color-text-secondary);
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+
+.product-price {
+	font-size: 17px;
+	font-weight: 500;
+	color: var(--color-text);
+	margin-bottom: 14px;
+}
+
+.product-badge {
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	padding: 4px 14px;
+	font-family: 'Inter', sans-serif;
+	font-size: 9px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	z-index: 2;
+}
+
+.badge-hit {
+	background: var(--color-text);
+	color: #fff;
+}
+
+.badge-new {
+	background: var(--color-primary);
+	color: #fff;
+}

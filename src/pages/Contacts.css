@@ -1,0 +1,142 @@
+.contacts-page {
+	padding: 60px 0 80px;
+	background: var(--color-bg-soft);
+	min-height: 60vh;
+}
+
+.contacts-title {
+	font-family: 'Playfair Display', serif;
+	font-size: 32px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	margin-bottom: 40px;
+	color: var(--color-text);
+}
+
+.contacts-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 60px;
+	align-items: start;
+}
+
+.contacts-info {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.contact-item {
+	display: flex;
+	gap: 18px;
+	align-items: flex-start;
+	background: #fff;
+	padding: 20px 24px;
+	border: 1px solid var(--color-border);
+	box-shadow: 0 4px 12px var(--color-shadow-light);
+	transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+	transform: translateX(6px);
+	box-shadow: 0 8px 24px var(--color-shadow-medium);
+	border-color: var(--color-primary);
+}
+
+.contact-icon {
+	font-size: 24px;
+	line-height: 1.4;
+}
+
+.contact-item h3 {
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: var(--color-text-secondary);
+	margin-bottom: 4px;
+}
+
+.contact-item p {
+	font-size: 16px;
+	color: var(--color-text);
+	margin: 0;
+}
+
+.contact-link {
+	font-size: 16px;
+	color: var(--color-text);
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.contact-link:hover {
+	color: var(--color-primary);
+}
+
+.contacts-form-wrapper {
+	background: #fff;
+	padding: 32px 28px;
+	border: 1px solid var(--color-border);
+	box-shadow: 0 4px 12px var(--color-shadow-light);
+}
+
+.contacts-form-wrapper h2 {
+	font-family: 'Playfair Display', serif;
+	font-size: 22px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin-bottom: 24px;
+	color: var(--color-text);
+}
+
+.contacts-form .form-group {
+	margin-bottom: 20px;
+}
+
+.contacts-form label {
+	display: block;
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--color-text-secondary);
+	margin-bottom: 6px;
+	font-family: 'Inter', sans-serif;
+}
+
+.contacts-form input,
+.contacts-form textarea {
+	width: 100%;
+	padding: 12px 16px;
+	border: 1px solid var(--color-border);
+	font-size: 15px;
+	transition: border-color 0.2s;
+	outline: none;
+	font-family: inherit;
+	background: var(--color-bg);
+}
+
+.contacts-form input:focus,
+.contacts-form textarea:focus {
+	border-color: var(--color-primary);
+}
+
+.contacts-form textarea {
+	resize: vertical;
+	min-height: 120px;
+}
+
+@media (max-width: 768px) {
+	.contacts-grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.contacts-title {
+		font-size: 26px;
+	}
+
+	.contacts-form-wrapper {
+		padding: 24px 20px;
+	}
+}
